@@ -20,5 +20,11 @@ export const customerApi = {
 };
 
 // Address API calls
+export const addressApi = {
+  getAll: (params = {}) => api.get('/addresses', { params }),
+  create: (data) => api.post('/addresses', data),
+  update: (id, data) => api.put(`/addresses/${id}`, data),
+  delete: (id) => api.delete(`/addresses/${id}`),
+};
 
 export default api;
